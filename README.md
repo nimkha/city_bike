@@ -167,3 +167,6 @@ As of now the logging is only sent to the terminal. It might be needed that the 
 
 ## Make use of env variables
 Instead of hardcoing the URL strings in the code as it is now we can move them to env variables enabling us to specify in docker compose file the URLs
+
+## Add https
+Need to later add certification handling.
