@@ -1,0 +1,10 @@
+services:
+  city-bike-api:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+      - LOG_LEVEL=info
+    restart: unless-stopped
+    container_name: city-bike-api
