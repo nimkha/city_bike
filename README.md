@@ -25,7 +25,7 @@ Explains the steps needed to get the API up and running.
 ## Clone the repository
 ```bash
 # Clone git repo
-git clone [URL](https://github.com/nimkha/city_bike.git)
+git clone https://github.com/nimkha/city_bike.git
 # Change directory to new cloned repo
 cd city_bike
 ```
