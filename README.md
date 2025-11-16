@@ -108,15 +108,13 @@ docker compose logs -f
 Expected output should look like
 ```bash
 ~ /Projects/city_bike$ docker compose logs -f
-city-bike-api  | [2025-11-16 14:39:02 +0000] [1] [INFO] Starting gunicorn 22.0.0
-city-bike-api  | [2025-11-16 14:39:02 +0000] [1] [INFO] Listening at: http://0.0.0.0:5000 (1)
-city-bike-api  | [2025-11-16 14:39:02 +0000] [1] [INFO] Using worker: sync
-city-bike-api  | [2025-11-16 14:39:02 +0000] [7] [INFO] Booting worker with pid: 7
-city-bike-api  | [2025-11-16 14:39:02 +0000] [8] [INFO] Booting worker with pid: 8
-city-bike-api  | INFO:app.api:Successfully processed STATION_INFORMATION_URL request.
-city-bike-api  | INFO:app.api:Successfully processed STATION_STATUS_URL request.
-city-bike-api  | INFO:app.api:Successfully processed STATION_INFORMATION_URL request.
-city-bike-api  | INFO:app.api:Successfully processed STATION_STATUS_URL request.
+city-bike-api  | [2025-11-16 19:14:55 +0000] [1] [INFO] Starting gunicorn 22.0.0
+city-bike-api  | [2025-11-16 19:14:55 +0000] [1] [INFO] Listening at: http://0.0.0.0:5000 (1)
+city-bike-api  | [2025-11-16 19:14:55 +0000] [1] [INFO] Using worker: sync
+city-bike-api  | [2025-11-16 19:14:55 +0000] [8] [INFO] Booting worker with pid: 8
+city-bike-api  | [2025-11-16 19:14:55 +0000] [9] [INFO] Booting worker with pid: 9
+city-bike-api  | 2025-11-16T19:15:34+0000 INFO app.api Successfully processed request to https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json
+city-bike-api  | 2025-11-16T19:15:34+0000 INFO app.api Successfully processed request to https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json
 ```
 
 ### Stopping the application
