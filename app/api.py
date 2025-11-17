@@ -56,12 +56,15 @@ def get_stations():
     }
     """
     response = get_data(STATION_INFORMATION_URL)
-    stations = response["data"]["stations"]
-    station_names_ids = {}
-    for station in stations:
-        station_names_ids[station["station_id"]] = station["name"]
+    if response is not None and len(response) > 1:
+        stations = response["data"]["stations"]
+        station_names_ids = {}
+        for station in stations:
+            station_names_ids[station["station_id"]] = station["name"]
 
-    return station_names_ids
+        return station_names_ids
+    else:
+        return {}
 
 
 def get_status():
@@ -75,14 +78,17 @@ def get_status():
         },
     """
     response = get_data(STATION_STATUS_URL)
-    stations = response["data"]["stations"]
-    station_bikes_locks = {}
-    for station in stations:
-        station_bikes_locks[station["station_id"]] = {
-            "num_bikes_available": station["num_bikes_available"],
-            "num_docks_available": station["num_docks_available"]}
+    if response is not None and len(response) > 1:
+        stations = response["data"]["stations"]
+        station_bikes_locks = {}
+        for station in stations:
+            station_bikes_locks[station["station_id"]] = {
+                "num_bikes_available": station["num_bikes_available"],
+                "num_docks_available": station["num_docks_available"]}
 
-    return station_bikes_locks
+        return station_bikes_locks
+    else:
+        return {}
 
 
 @api_bp.route("/bike_status", methods=["GET"])
